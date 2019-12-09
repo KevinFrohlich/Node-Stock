@@ -1,0 +1,23 @@
+{
+  "name": "Node-Stock",
+  "version": "1.0.0",
+  "description": "Stock Market Tracker using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinFrohlich/Node-Stock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinFrohlich/Node-Stock/issues"
+  },
+  "homepage": "https://github.com/KevinFrohlich/Node-Stock#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
