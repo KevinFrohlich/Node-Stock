@@ -1,0 +1,110 @@
+.navigation {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+/* Large */
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, you center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* On small screens, you are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+}
+.profile {
+  height: auto;
+  width: 400px;
+  border-radius: 15px;
+}
+.header-container {
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/* icons display sizes */
+.git {
+  height: 35px;
+  width: auto;
+  position: relative;
+  display: flex;
+  padding-left: 25px;
+}
+.linkin {
+  height: 35px;
+  width: auto;
+  display: flex;
+  position: relative;
+  padding-left: 25px;
+}
+.face {
+  height: 35px;
+  width: auto;
+  display: flex;
+  position: relative;
+  padding-left: 25px;
+}
+.insta {
+  height: 35px;
+  width: auto;
+  display: flex;
+  position: relative;
+  padding-left: 25px;
+}
+
+.container {
+  width: auto;
+}
+
+/* Repositories pasted in from Github*/
+.jumbotron {
+  display: flex;
+}
+
+/* icons row*/
+td {
+  height: auto;
+  width: 100px;
+  padding: 20px 1px;
+}
+
+/* Sticky footer */
+#email {
+  height: 25px;
+  width: 25px;
+  padding-right: 2px;
+}
+.contact {
+  overflow: hidden;
+  white-space: nowrap;
+}
+#border {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.footer {
+  background-color: #272b30;
+  color: #272b30;
+}
