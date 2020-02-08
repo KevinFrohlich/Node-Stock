@@ -1,1 +1,5 @@
-<h1>This is my handlebars webpage.</h1>
+<h1>{{stock.companyName}} ({{stock.symbol}})</h1>
+
+{{#each stock}}
+{{ @key }} || {{ this }}<br />
+{{/each}}

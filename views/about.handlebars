@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/slate/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-G9YbB4o4U6WS4wCthMOpAeweY4gQJyyx0P3nZbEBHyz+AtNoeasfRChmek1C2iqV" crossorigin="anonymous">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <title>Hello world!</title>
+</head>
+
+<body>
+    <script>
+        function loadRepos() {
+            $('#repos').empty();
+            let url = 'https://api.github.com/users/kevinfrohlich/repos';
+            $.ajax({
+                url,
+                success: displayRepos
+            });
+            function displayRepos(repos) {
+                for (let repo of repos) {
+                    let link = $('<a>').text(repo.full_name);
+                    link.attr('href', repo.html_url);
+                    $('#repos').append($('<li>').append(link));
+                }
+            }
+        }
+        $(document).ready(function () {
+            $('.git').hover(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4ddd6e71f5a10612cbefe/1574231512412/octocat1.png?format=300w');
+                $(this).css('height', '35px');
+            });
+            $('.git').mouseleave(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d97d305f4c301a5d534a/1574230398670/GitHub-Light.png?format=300w');
+                $(this).css('height', '35px');
+            });
+        });
+        $(document).ready(function () {
+            $('.linkin').hover(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d93af33896519eda6450/1574230332100/in1.png?format=100w');
+                $(this).css('height', '35px');
+            });
+            $('.linkin').mouseleave(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4ddf94a9bfb2d3f9092a4/1574231546641/link-white.png?format=100w');
+                $(this).css('height', '35px');
+            });
+        });
+        $(document).ready(function () {
+            $('.face').hover(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d946feebed7bbb1e4c25/1574230343353/face1.png?format=100w');
+                $(this).css('height', '35px');
+            });
+            $('.face').mouseleave(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d970e71f5a10612c6b80/1574230385349/face-white.png?format=100w');
+                $(this).css('height', '35px');
+            });
+        });
+        $(document).ready(function () {
+            $('.insta').hover(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d926f129ea05a892e97b/1574230311799/insta1a.png?format=100w');
+                $(this).css('height', '35px');
+            });
+            $('.insta').mouseleave(function () {
+                $(this).attr('src', 'https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4dde5f33896519edabfb0/1574231527105/in-white.png?format=500w');
+                $(this).css('height', '35px');
+            });
+        });
+    </script>
+    <div class="container">
+        <header class="header-container">
+            <button type="button" class="btn btn-info btn-lg btn-block">Kevin Frohlich: Full Stack Developer</button>
+        </header>
+        <br>
+
+        <div class="row">
+            <div id="col1" class="col-sm-5">
+                <img src="https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d80ccb893b61e3fed8c9/1574230094916/kev.jpg?format=300w"
+                    class="profile">
+                <table>
+                    <th>
+                        <tr class="table-dark">
+                            <td>
+                                <div id="one"><a href="https://github.com/KevinFrohlich"><img
+                                            src="https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d97d305f4c301a5d534a/1574230398670/GitHub-Light.png?format=300w"
+                                            class="git"></a></div>
+                            </td>
+                            <td>
+                                <div id="two"><a href="https://www.linkedin.com/in/kevin-frohlich-a9478b3a/"><img
+                                            src="https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4ddf94a9bfb2d3f9092a4/1574231546641/link-white.png?format=100w"
+                                            class="linkin"></a></div>
+                            </td>
+                            <td>
+                                <div id="three"><a href="https://www.facebook.com/kevin.frohlich"><img
+                                            src="https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d970e71f5a10612c6b80/1574230385349/face-white.png?format=100w"
+                                            class="face"></a></div>
+                            </td>
+                            <td>
+                                <div id="four"><a href="https://www.instagram.com/froggies_art"><img
+                                            src="https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4dde5f33896519edabfb0/1574231527105/in-white.png?format=500w"
+                                            class="insta"></a></div>
+                            </td>
+                        </tr>
+                    </th>
+                </table>
+            </div>
+            <div id="border" class="card border-info mb-3 col-sm-6">
+                <div class="card-header">
+                    <h4 class="text-info">My Skills:</h4>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#language">Lang.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#frame">Frame.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tech">Tech.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#other">Other Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#certs">Certs</a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade" id="language">
+                            <h5 class="text-info">Languages:</h5>
+                            <p>Javascript (ES6), HTML5, CSS3, TypeScript.</p>
+                        </div>
+                        <div class="tab-pane fade" id="certs">
+                            <h5 class="text-info">Current Certifications + Others in Progress:</h5>
+                            <p>CompTIA Network + (9FWGZZMFHC4E1ZKG), AWS Certified Cloud Practitioner(In Progress), AWS
+                                Certified Security – Specialty(future)</p>
+                        </div>
+                        <div class="tab-pane fade" id="frame">
+                            <h5 class="text-info">Frameworks +:</h5>
+                            <p>jQuery, Bootstrap, Flexbox, ReactJS, Redux, AngularJS, Express, Django, NoSQL, MySQL,
+                                SQL, Node.js , Mongodb server, Apache Cordova, Adobe Photoshop, Excel, Microsoft Office
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="tech">
+                            <h5 class="text-info">Technologies:</h5>
+                            <p>Visual Studio Code, Git, GitHub, GitKraken, Slack, Atom, Responsive Web Design, AJAX,
+                                JSON, XML, Amazon AWS.</p>
+                        </div>
+                        <div class="tab-pane fade" id="other">
+                            <h5 class="text-info">Other Skills (and/or currently learning):</h5>
+                            <p>Java, Python, PHP, C#, .NET Framework, .NET Core, ASP.NET, Agile Project Management,
+                                Network, Cyber Security, Public Speaker, Leadership Trainer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="card-title text-info">My Repositories on Github:</h4>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">GitHub Username:</span>
+                                </div>
+                                <input type="text" class="form-control-default" for="inputDefault"
+                                    aria-label="kevinfrohlich" placeholder="kevinfrohlich">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><button class="btn btn-outline-info btn-sm"
+                                            placeholder="kevinfrohlich" onclick="loadRepos()">Load Repos</button></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="repos">
+                        <li>
+                            <a href="{repo.html_url}"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="container col-sm-12">
+                <button type="button" class="btn btn-info btn-lg btn-block">
+                    <div class="container" id="contact">
+                        <span class="text-item">Contact: (530) 604 9389 - Redding, CA.</span>
+                        <span><a class="nav-link" style="text-align: center" href="mailto:kevinfrohlich@gmail.com"><img
+                                    src="https://static1.squarespace.com/static/58f705e5893fc0eeb1eaf706/t/5dd4d9026bae7d14c44542de/1574230275720/email.png?format=750w"
+                                    id="email">
+                                kevinfrohlich@gmail.com</a></span>
+                    </div>
+                </button>
+
+            </footer>
+        </div>
+        <!-- Optional JavaScript -->
+        <script src=script.js type="text/javaScript"></script>
+</body>
+
+</html>
