@@ -1,5 +1,25 @@
-<h1>{{stock.companyName}} ({{stock.symbol}})</h1>
+<div class="card border-info mb-3" style="max-width: 20rem;">
+    <div class="card-header">
+        <h2>{{stock.companyName}} ({{stock.symbol}})</h2>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><strong>{{stock.primaryExchange}}</strong></h4>
+        <p class="card-text"><strong>Latest Price: </strong>${{stock.latestPrice}}<br />
+            <strong>Previous Close: </strong>${{stock.previousClose}}<br />
+            <strong>Percent Change: </strong>{{stock.changePercent}}%<br />
+            <strong>Market Cap: </strong>${{stock.marketCap}}<br />
+            <strong>YTD Change: </strong>{{stock.ytdChange}}%<br />
+            <strong>52 Week High: </strong>${{stock.week52High}}<br />
+            <strong>52 Week Low: </strong>${{stock.week52Low}}<br /></p>
+    </div>
+</div>
 
+
+<br /><br />
+
+
+<!--
 {{#each stock}}
 {{ @key }} || {{ this }}<br />
 {{/each}}
+-->
